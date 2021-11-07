@@ -13,6 +13,7 @@ interface pricingProps {
     Price: string,
     PackageTitle: String
 }
+
 const useStyles = makeStyles({
     root: {
         maxWidth: 345,
@@ -26,11 +27,10 @@ const useStyles = makeStyles({
 
 export default function MediaCard(props: pricingProps) {
     const classes = useStyles();
-
     return (
         <Card className={classes.root}>
             <CardActionArea>
-    <div className={'package'}>{props.PackageTitle}</div>
+                <div className={'package'}>{props.PackageTitle}</div>
                 <div className={'price'}> {props.Price}</div>
             </CardActionArea>
             <CardActions>
