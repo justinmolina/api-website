@@ -24,7 +24,6 @@ const useStyles = makeStyles({
         height: 140,
     },
 });
-
 export default function MediaCard(props: pricingProps) {
     const classes = useStyles();
     return (
