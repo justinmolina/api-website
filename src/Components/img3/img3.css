@@ -1,0 +1,25 @@
+
+.viewer:focus{
+  outline: 0;
+  box-shadow: none!important;
+}
+
+.viewer:active {
+  outline: none;
+  border: none;
+  box-shadow: none!important;
+  }
+  
+  canvas {
+    outline: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0); /* mobile webkit */
+  }
+
+  .post_hover{
+    background-color: red;
+    width: 100%;
+    text-align: center;
+    z-index: 9;
+    position: absolute;
+    bottom: 13%;
+  }

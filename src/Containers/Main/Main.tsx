@@ -4,6 +4,7 @@ import About from "../../Components/About";
 import Resume from "../../Components/Resume";
 import Contact from "../../Components/Contact";
 import Portfolio from "../../Components/Portfolio";
+import Img3 from '../../Components/img3'
 import React from "react";
 
 interface MainProps {
@@ -12,6 +13,7 @@ interface MainProps {
 const Main = (props: MainProps) => {
     return (
         <div>
+            <Img3/>
             <Header data={props.data.main} />
             <About data={props.data.main} />
             <Resume data={props.data.resume} />
