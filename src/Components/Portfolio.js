@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Zmage from "react-zmage";
 import Fade from "react-reveal";
+import Img3 from '../Components/img3'
 
 let id = 0;
 class Portfolio extends Component {
@@ -20,12 +21,22 @@ class Portfolio extends Component {
       );
     });
 
+    projects.push(
+        <div key={id++} className="columns portfolio-item">
+          <div className="item-wrap">
+            <Img3 model={"https://firebasestorage.googleapis.com/v0/b/hullthread.appspot.com/o/Models%2Ffccc4984-d038-489e-a489-08662e7fe604.glb?alt=media&token=0b5be17e-ef05-4103-aabb-4a599b1df130"}
+                  height={'150px'}
+            />
+            <div style={{ textAlign: "center" }}>{projects.title}</div>
+          </div>
+        </div>
+        )
     return (
       <section id="portfolio">
         <Fade left duration={1000} distance="40px">
           <div className="row">
             <div className="twelve columns collapsed">
-              <h1>Check Out Some of My Works.</h1>
+              <h1>Check Out Some of our work.</h1>
 
               <div
                 id="portfolio-wrapper"
