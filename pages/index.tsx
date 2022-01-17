@@ -41,7 +41,9 @@ const Home: NextPage = (props: HomeProps) => {
     <div>
       <Header data={props.summaryInfo}/>
       <About data={props.summaryInfo}/>
+        <div style={{background: 'radial-gradient(rgba(25,25,28,0) 50%,#19191c 80%),conic-gradient(#9c3cf7 0,#19191c 15.2%,#19191c 18.2%,#1e1ae8 20.5%,#19191c 30.2%,#19191c 50%,#0e0ab4 56.5%,#1e1ae8 59.4%,#060551 66.2%,#101057 72.9%,#242473 85.1%,#1e1ae8 89.1%,#0a06b7 90.6%,#19191c 93.7%,#9c3cf7 100%)'}}>
       <BodyInfo data={props.summaryInfo}/>
+        </div>
     </div>
   )
 }
