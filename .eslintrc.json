@@ -1,3 +1,10 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "quotes": [1, "single", { "avoidEscape": true }],
+    "no-console": ["warn"],
+    "block-spacing": ["warn"],
+    "line-comment-position": ["warn"],
+    "indent": ["warn", 2]
+  }
 }
