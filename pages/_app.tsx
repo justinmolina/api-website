@@ -1,6 +1,7 @@
 import '../styles/default.css'
 import '../styles/fonts.css'
 import '../styles/bodyinfo.css'
+import '../styles/SignupForm.css'
 
 import type { AppProps } from 'next/app'
 

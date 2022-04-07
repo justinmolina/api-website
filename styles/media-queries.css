@@ -57,10 +57,10 @@
    #about .contact-details { width: 50%; }
    #about .download { width: 50%; }
 
-   /* summaryInfo Section
+   /* businessInfo Section
    ------------------------------------------------------------------- */
-   #summaryInfo h1 { font: 16px/24px 'opensans-bold', sans-serif; }
-   #summaryInfo .main-col { padding-right: 5%; }
+   #businessInfo h1 { font: 16px/24px 'opensans-bold', sans-serif; }
+   #businessInfo .main-col { padding-right: 5%; }
 
    /* Testimonials Section
    ------------------------------------------------------------------- */
@@ -224,16 +224,16 @@
    #about .main-col { padding-right: 30px; }
 
 
-   /* summaryInfo Section
+   /* businessInfo Section
    --------------------------------------------------------------------- */
-   #summaryInfo .header-col {
+   #businessInfo .header-col {
       padding-top: 0;
       margin-bottom: 48px;
       text-align: center;
    }
-   #summaryInfo h1 { letter-spacing: 3px; }
-   #summaryInfo .main-col { padding-right: 30px; }
-   #summaryInfo h3, #summaryInfo .info { text-align: center; }
+   #businessInfo h1 { letter-spacing: 3px; }
+   #businessInfo .main-col { padding-right: 30px; }
+   #businessInfo h3, #businessInfo .info { text-align: center; }
       
    .bars { width: 100%; }
 

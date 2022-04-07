@@ -5,6 +5,7 @@
     "no-console": ["warn"],
     "block-spacing": ["warn"],
     "line-comment-position": ["warn"],
-    "indent": ["warn", 2]
+    "indent": ["warn", 2],
+    "no-unused-vars": "warn"
   }
 }

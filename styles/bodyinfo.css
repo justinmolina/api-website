@@ -9,7 +9,7 @@
    a. General Styles
    b. Header Styles
    c. About Section
-   d. summaryInfo Section
+   d. businessInfo Section
    e. Portfolio Section
    f. Call To Action Section
    g. Testimonials Section
@@ -22,8 +22,7 @@
 /* a. General Styles
 /* ------------------------------------------------------------------ */
 
-/*body { background: #0f0f0f; }*/
-
+body { background: #27292e}
 /* ------------------------------------------------------------------ */
 /* b. Header Styles
 /* ------------------------------------------------------------------ */
@@ -183,8 +182,7 @@ ul#nav li.current a { color: #fe6928; }
 
 #about {
     background: #000524;
-    padding-top: 96px;
-    padding-bottom: 66px;
+
     overflow: hidden;
 }
 
@@ -227,51 +225,51 @@ ul#nav li.current a { color: #fe6928; }
 
 
 /* ------------------------------------------------------------------ */
-/* d. summaryInfo Section
+/* d. businessInfo Section
 /* ------------------------------------------------------------------ */
 
-#summaryInfo {
+#businessInfo {
     background: #fff;
     padding-top: 90px;
     padding-bottom: 72px;
     overflow: hidden;
 }
 
-#summaryInfo a, #summaryInfo a:visited  { color: #0762f9; }
-#summaryInfo a:hover, #summaryInfo a:focus { color: #313131; }
+#businessInfo a, #businessInfo a:visited  { color: #0762f9; }
+#businessInfo a:hover, #businessInfo a:focus { color: #313131; }
 
-#summaryInfo h1 {
+#businessInfo h1 {
     font: 18px/24px 'opensans-bold', sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-#summaryInfo h1 span {
+#businessInfo h1 span {
     border-bottom: 3px solid #0762f9;
     padding-bottom: 6px;
 }
-#summaryInfo h3 {
+#businessInfo h3 {
     font: 25px/30px 'opensans-bold', sans-serif;
 }
 
-#summaryInfo .header-col { padding-top: 9px; }
-#summaryInfo .main-col { padding-right: 10%; }
+#businessInfo .header-col { padding-top: 9px; }
+#businessInfo .main-col { padding-right: 10%; }
 
 .education, .work {
     margin-bottom: 48px;
     padding-bottom: 24px;
     border-bottom: 1px solid #E8E8E8;
 }
-#summaryInfo .info {
+#businessInfo .info {
     font: 16px/24px 'librebaskerville-italic', serif;
     color: #6E7881;
     margin-bottom: 18px;
     margin-top: 9px;
 }
-#summaryInfo .info span {
+#businessInfo .info span {
     margin-right: 5px;
     margin-left: 5px;
 }
-#summaryInfo .date {
+#businessInfo .date {
     font: 15px/24px 'opensans-regular', sans-serif;
     margin-top: 6px;
 }
@@ -1006,7 +1004,7 @@ footer .social-links li:first-child { margin-left: 0; }
 
 
 .social .btn:first-child{
-    margin-right: 30px;
+    /*margin-right: 30px;*/
 }
 .social .btn{
     padding-left: 30px;

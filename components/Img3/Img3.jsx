@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import '@google/model-viewer'
 
 const Img3Component = (props) => {
@@ -28,6 +28,8 @@ const Img3Component = (props) => {
     // @ts-ignore
       <model-viewer
         className={'viewer'}
+        reveal={'onMouseOver'}
+        poster={'https://thumbor.forbes.com/thumbor/711x533/https://specials-images.forbesimg.com/imageserve/5faad4255239c9448d6c7bcd/Best-Animal-Photos-Contest--Close-Up-Of-baby-monkey/960x0.jpg?fit=scale'}
         zoom={false}
         quick-look-browsers="safari chrome"
         width={ props.width || '100%'}
@@ -35,6 +37,7 @@ const Img3Component = (props) => {
           borderRadius: props.borderRadius || '',
           height: props.height || '500px',
           width: props.width || '100%',
+          minWidth: props.minWidth || '100%',
           maxWidth: props.MaxWidth || '1000px',
           margin: 'auto',
           backgroundColor: props.backgroundColor || '',
@@ -48,13 +51,8 @@ const Img3Component = (props) => {
         ios-src={props.ArFile || 'https://firebasestorage.googleapis.com/v0/b/dc1-ba765.appspot.com/o/hoodieblue.usdz?alt=media&token=4d88ec5a-e019-493d-8487-9f745602cdf9'}
         magic-leap
         ar-scale="auto"
-        camera-controls
+        camera-controls={false}
         background-color={props.backgroundColor || ''}>
-        {/*<div className="controls">*/}
-        {/*  <button data-color="1,0,0,1">Red</button>*/}
-        {/*  <button data-color="0,1,0,1">Green</button>*/}
-        {/*  <button data-color="0,0,1,1">Blue</button>*/}
-        {/*</div>*/}
       </model-viewer>
     )
   } else {

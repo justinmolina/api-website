@@ -1,9 +1,13 @@
-import React, {useEffect} from 'react'
+import React, {memo, useReducer} from 'react'
 import type {NextPage} from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import dynamic from 'next/dynamic'
+import SignupForm from '../components/Signup/SignupForm';
+import GlobalStateReducer from '../GlobalState/Reducer/reducer';
+import {GlobalStateContext, initalState} from '../GlobalState/context/GlobalStateContext'
+import PricingContainer from '../components/Pricing/PricingContainer';
 
 interface HomeProps {
     summaryInfo: any
@@ -11,9 +15,8 @@ interface HomeProps {
 
 // @ts-ignore
 const Home: NextPage = (props: HomeProps) => {
-  const [isLoaded, setIsLoaded] = React.useState(false)
-  console.log(props.summaryInfo)
 
+  const [globalState, dispatch] = useReducer(GlobalStateReducer, initalState)
   const Header: any = dynamic(
     // @ts-ignore
     () => {
@@ -38,18 +41,19 @@ const Home: NextPage = (props: HomeProps) => {
   )
 
   return (
-    <div>
-      <Header data={props.summaryInfo}/>
-      <About data={props.summaryInfo}/>
-        <div style={{background: 'radial-gradient(rgba(25,25,28,0) 50%,#19191c 80%),conic-gradient(#9c3cf7 0,#19191c 15.2%,#19191c 18.2%,#1e1ae8 20.5%,#19191c 30.2%,#19191c 50%,#0e0ab4 56.5%,#1e1ae8 59.4%,#060551 66.2%,#101057 72.9%,#242473 85.1%,#1e1ae8 89.1%,#0a06b7 90.6%,#19191c 93.7%,#9c3cf7 100%)'}}>
-      <BodyInfo data={props.summaryInfo}/>
-        </div>
-    </div>
+    <GlobalStateContext.Provider value={{globalState: globalState, dispatch: dispatch}}>
+      <div>
+        <Header data={props.summaryInfo}/>
+        <About data={props.summaryInfo}/>
+        <BodyInfo data={props.summaryInfo}/>
+        <PricingContainer summaryInfo={props.summaryInfo}/>
+        <SignupForm/>
+      </div>
+    </GlobalStateContext.Provider>
   )
 }
 
 export function getStaticProps() {
-
   let summaryInfo = require('../public/summaryInfo.json')
   return {
     props: {
@@ -58,4 +62,4 @@ export function getStaticProps() {
   }
 }
 
-export default Home
+export default memo(Home)

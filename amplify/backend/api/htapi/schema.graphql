@@ -1,0 +1,10 @@
+type BetaUser @model {
+  id: ID!
+  storeName: String!
+  storeAddress: String!
+  emailAddress: String!
+  Date: String!
+  description: String
+  currentWebsite: String!
+  currentWebsiteArchitecture: String
+}
