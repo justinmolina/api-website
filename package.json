@@ -29,7 +29,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
-    "start": "next start -p $PORT",
+    "start": "next start",
     "lint": "next lint",
     "test": "jest --coverage",
     "prettier": "prettier --write 'components/**/*.{tsx, ts, js, jsx}'"
