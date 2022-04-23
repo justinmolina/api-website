@@ -59,4 +59,4 @@ const SignupForm = () => {
   );
 };
 
-export default SignupForm;
+export default memo(SignupForm);

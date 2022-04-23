@@ -75,12 +75,6 @@ const Header = (props: any) => {
             </a>
           </li>
 
-          {/*<li>*/}
-          {/*  <a className="smoothscroll" href="#portfolio">*/}
-          {/*      Examples*/}
-          {/*  </a>*/}
-          {/*</li>*/}
-
           <li>
             <a onClick={openSignupForm} className="smoothscroll">
               Sign Up

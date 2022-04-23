@@ -1,13 +1,9 @@
 import React, {memo, useReducer} from 'react'
 import type {NextPage} from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 import dynamic from 'next/dynamic'
 import SignupForm from '../components/Signup/SignupForm';
 import GlobalStateReducer from '../GlobalState/Reducer/reducer';
 import {GlobalStateContext, initalState} from '../GlobalState/context/GlobalStateContext'
-import PricingContainer from '../components/Pricing/PricingContainer';
 
 interface HomeProps {
     summaryInfo: any
@@ -40,14 +36,26 @@ const Home: NextPage = (props: HomeProps) => {
     }, {loading: () => null, ssr: false}
   )
 
+  const Parallax: any = dynamic(
+    // @ts-ignore
+    () => {
+      return import ('../components/Img3/Parallax2')
+        .then((mod) => mod.default)
+    }, {loading: () => null, ssr: false}
+  )
   return (
     <GlobalStateContext.Provider value={{globalState: globalState, dispatch: dispatch}}>
       <div>
-        <Header data={props.summaryInfo}/>
-        <About data={props.summaryInfo}/>
-        <BodyInfo data={props.summaryInfo}/>
-        <PricingContainer summaryInfo={props.summaryInfo}/>
-        <SignupForm/>
+
+        <canvas id="bg">
+        </canvas>
+        <Parallax/>
+        <div style={{position: 'absolute', zIndex: 99, color: 'white', fontSize: '150px', padding: '50px'}}>Hello</div>
+        {/*<Header data={props.summaryInfo}/>*/}
+        {/*<About data={props.summaryInfo}/>*/}
+        {/*<BodyInfo data={props.summaryInfo}/>*/}
+        {/*<PricingContainer summaryInfo={props.summaryInfo}/>*/}
+        {/*<SignupForm/>*/}
       </div>
     </GlobalStateContext.Provider>
   )

@@ -15,7 +15,6 @@ export interface IndustriesRow {
   key: number;
 }
 const Card = (props: any) => {
-  console.log(props.ref?.current);
   return (
     props.isOpen && (
       <div
