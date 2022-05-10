@@ -1,7 +1,13 @@
-import React from 'react'
+import React, {useEffect, useRef} from 'react'
 import '@google/model-viewer'
 
 const Img3Component = (props) => {
+  const canvas = useRef(undefined)
+
+  useEffect(() => {
+    if (!canvas?.current) return;
+  }, [canvas])
+
   const modelViewerColor = document.querySelector('model-viewer#color');
 
   let colorControls =  document.querySelector('#color-controls') || undefined
@@ -57,7 +63,7 @@ const Img3Component = (props) => {
     )
   } else {
     return (
-      <></>)
+      <div ref={canvas}> </div>)
   }
 }
 

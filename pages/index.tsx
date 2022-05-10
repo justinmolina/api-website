@@ -47,10 +47,11 @@ const Home: NextPage = (props: HomeProps) => {
     <GlobalStateContext.Provider value={{globalState: globalState, dispatch: dispatch}}>
       <div>
 
-        <canvas id="bg">
-        </canvas>
+        {/*<canvas id="bg">*/}
+        {/*</canvas>*/}
+        <div style={{width: '100%', height: '1500px'}} id={'parallaxContainer'}/>
         <Parallax/>
-        <div style={{position: 'absolute', zIndex: 99, color: 'white', fontSize: '150px', padding: '50px'}}>Hello</div>
+        {/*<div style={{position: 'absolute', zIndex: 99, color: 'white', fontSize: '150px', padding: '50px'}}>Hello</div>*/}
         {/*<Header data={props.summaryInfo}/>*/}
         {/*<About data={props.summaryInfo}/>*/}
         {/*<BodyInfo data={props.summaryInfo}/>*/}
